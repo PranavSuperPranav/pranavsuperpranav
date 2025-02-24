@@ -241,7 +241,7 @@
     <div class="container">
         <div class="top-section">
             <img src="{% static 'hello/dietitian.jpeg' %}" alt="Shalini">
-            <p><strong>Shalini Gupta</strong> is a Foodie with 5 years of experience in food quality assurance at various multinational companies. With a Bachelor's in Food Technology, she specializes in creating personalized, nutritionally balanced diets to enhance mental, physical, and genetic well-being.</p>
+            <p><strong>Shalini Gupta</strong> is a Foodie with 29 years of experience in food quality assurance at various multinational companies. With a Bachelor's in Food Technology, she specializes in creating personalized, nutritionally balanced diets to enhance mental, physical, and genetic well-being.</p>
         </div>
 
         <div class="section" id="about">
@@ -316,8 +316,16 @@
         </div>
         
         <script>
-
- document.getElementById("contactForm").addEventListener("submit", function(e) {
+            document.getElementById("contactForm").addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    message: document.getElementById("message").value
+                };
+        
+document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
     
     const formData = {
@@ -326,7 +334,7 @@
         message: document.getElementById("message").value
     };
 
-    fetch("AKfycbyhSDKqZAAjEWUeJH4qiYDJiQsGOnTYwrfsTGSZlEHvSOGrIlkfY2Tq05gwtBGytwXF", {
+    fetch("https://script.google.com/macros/s/AKfycbz5hQhRfP3A1kzropyC3c75X1wZw44lfzGDi-vLQc4elVCvkQtSVtS9fa4r9S4q5TWw/exec", {
         method: "POST",
         mode: "cors",
         headers: { "Content-Type": "application/json" },
@@ -341,12 +349,9 @@
         }
     })
     .catch(error => alert("Error sending message: " + error));
-});
 
-
-</script>
-
-
+            });
+        </script>
         
 
         <!-- User Input Section -->
