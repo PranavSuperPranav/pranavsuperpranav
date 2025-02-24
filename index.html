@@ -317,7 +317,7 @@
         
         <script>
 
-   document.getElementById("contactForm").addEventListener("submit", function(e) {
+ document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
     
     const formData = {
@@ -326,7 +326,7 @@
         message: document.getElementById("message").value
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbyhSDKqZAAjEWUeJH4qiYDJiQsGOnTYwrfsTGSZlEHvSOGrIlkfY2Tq05gwtBGytwXF/exec", {
+    fetch("YOUR_NEW_DEPLOYED_WEB_APP_URL", {
         method: "POST",
         mode: "cors",
         headers: { "Content-Type": "application/json" },
@@ -342,6 +342,7 @@
     })
     .catch(error => alert("Error sending message: " + error));
 });
+
 
 </script>
 
